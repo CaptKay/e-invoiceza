@@ -1,0 +1,26 @@
+{
+  "name": "e-invoiceza",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Multi-tenant EU e-invoicing SaaS platform",
+  "scripts": {
+    "dev": "pnpm run --recursive --parallel dev",
+    "dev:client": "pnpm run --filter @e-invoiceza/client dev",
+    "dev:server": "pnpm run --filter @e-invoiceza/server dev",
+    "build": "pnpm run --recursive build",
+    "build:client": "pnpm run --filter @e-invoiceza/client build",
+    "build:server": "pnpm run --filter @e-invoiceza/server build",
+    "test": "pnpm run --recursive test",
+    "test:client": "pnpm run --filter @e-invoiceza/client test",
+    "test:server": "pnpm run --filter @e-invoiceza/server test",
+    "lint": "pnpm run --recursive lint",
+    "lint:workspace": "pnpm exec biome lint ."
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "pnpm@9.0.0",
+  "devDependencies": {
+    "@biomejs/biome": "^1.8.2"
+  }
+}
